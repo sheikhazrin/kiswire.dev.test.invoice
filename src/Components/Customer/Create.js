@@ -59,17 +59,17 @@ const CustomerCreate = (props) => {
   const onSubmit = (values) => {
     console.log('Form data', values);
     values.ccreatedAt = new Date();
-    // axios
-    //   .post(baseURL, values)
-    //   .then((res) => {
-    //     // console.log(baseURL);
-    //     // console.log(values);
-    //     if (res.status === 201) {
-    //       alert('Successfully Created');
-    //       props.history.push('/customer/list');
-    //     } else Promise.reject();
-    //   })
-    //   .catch((err) => alert('Something went wrong'));
+    axios
+      .post(baseURL, values)
+      .then((res) => {
+        // console.log(baseURL);
+        // console.log(values);
+        if (res.status === 201) {
+          alert('Successfully Created');
+          props.history.push('/customer/list');
+        } else Promise.reject();
+      })
+      .catch((err) => alert('Something went wrong'));
   };
 
   // ***** Load State Data
