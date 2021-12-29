@@ -9,7 +9,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const MailingState = (props) => {
   const baseURL =
-    'https://61c4403ef1af4a0017d99432.mockapi.io/api/kiswire/dev/state/';
+    'https://61c4403ef1af4a0017d99432.mockapi.io/api/kiswire/dev/state';
   const [pending, setPending] = useState(true);
   const [data, setDatas] = useState([]);
   // const [rows, setRows] = useState([]);
@@ -47,11 +47,11 @@ const MailingState = (props) => {
   };
   // ***** setting DataTable Colums
   const columns = [
-    {
-      name: 'Id',
-      selector: (row) => row.id,
-      sortable: true,
-    },
+    // {
+    //   name: 'Id',
+    //   selector: (row) => row.id,
+    //   sortable: true,
+    // },
     {
       name: 'State',
       selector: (row) => row.name,

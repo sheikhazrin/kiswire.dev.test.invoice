@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
 function LoginForm({ authenticated, login, location }) {
-  const [email, setEmail] = useState('shso');
+  const [email, setEmail] = useState('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyIiwiZmlyc3RuYW1lIjoiVXNlciIsImxhc3RuYW1lIjoiMiIsImVtYWlsIjoidXNlcjJAdGVzdC5jb20iLCJ3b3JrZ3JvdXBpZCI6MCwicm9sZWlkIjowLCJyb2xlbGV2ZWwiOjAsInBob3RvdXJsIjoibm9uZSIsInNpZ25hdHVyZXVybCI6Im5vbmUiLCJleHAiOjE2NDA4MjUwOTZ9.IkFYA5ygpXkOQLtNrwW2yoUDAx8ydKIiDeYHG71E-Jg');
   const [password, setPassword] = useState('shso');
 
   const handleClick = () => {

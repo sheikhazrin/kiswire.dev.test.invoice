@@ -27,7 +27,7 @@ import {
 import { signIn } from './Components/Auth';
 // ***** Auth Module
 import AuthRoute from './Components/AuthRoute';
-import AuthProfile from './Components//AuthProfile';
+import AuthProfile from './Components/AuthProfile';
 // ***** Page Module
 import NotFound from './Components/NotFound';
 import Dashboard from './Components/Dashboard';
@@ -201,11 +201,11 @@ function App() {
             path="/district/:slug"
             component={DistrictEdit}
           />
-          <AuthRoute
+          {/* <AuthRoute
             authenticated={authenticated}
             path="/invoice"
-            component={Dashboard}
-          />
+            component={InvoiceList}
+          /> */}
 
           <Route component={NotFound} />
         </Switch>

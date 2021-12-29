@@ -17,11 +17,11 @@ const CustomerList = (props) => {
 
   // ***** setting DataTable Colums
   const columns = [
-    {
-      name: 'Id',
-      selector: (row) => row.id,
-      sortable: true,
-    },
+    // {
+    //   name: 'Id',
+    //   selector: (row) => row.id,
+    //   sortable: true,
+    // },
     {
       name: 'Name',
       selector: (row) => row.cname,

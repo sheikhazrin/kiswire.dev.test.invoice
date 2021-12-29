@@ -17,11 +17,11 @@ const MailingDistrict = (props) => {
 
   // ***** setting DataTable Colums
   const columns = [
-    {
-      name: 'Id',
-      selector: (row) => row.id,
-      sortable: true,
-    },
+    // {
+    //   name: 'Id',
+    //   selector: (row) => row.id,
+    //   sortable: true,
+    // },
     {
       name: 'District',
       selector: (row) => row.dname,
