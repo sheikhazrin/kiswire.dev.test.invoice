@@ -37,7 +37,7 @@ import LogoutButton from './Components/LogoutButton';
 // ***** Customer Module
 import CustomerList from './Components/Customer/List';
 import CustomerCreate from './Components/Customer/Create';
-// import CustomerEdit from './Components/Customer/CustomerEdit';
+import CustomerEdit from './Components/Customer/Edit';
 // ***** State Module
 import MailingState from './Components/State/List';
 import StateEdit from './Components/State/Edit';
@@ -46,7 +46,8 @@ import StateCreate from './Components/State/Create';
 import MailingDistrict from './Components/District/List';
 import DistrictCreate from './Components/District/Create';
 import DistrictEdit from './Components/District/Edit';
-
+// ***** Invoice Module
+import InvoiceList from './Components/Invoice/List';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -103,7 +104,7 @@ function App() {
                 District
               </NavLink>
               <NavLink
-                to="/invoice"
+                to="/invoice/list"
                 exact
                 className="nav-link"
                 activeClassName="disabled"
@@ -163,13 +164,12 @@ function App() {
             path="/customercreate"
             component={CustomerCreate}
           />
-          {/* <AuthRoute
+          <AuthRoute
             authenticated={authenticated}
-            path="/customer/:id"
+            path="/customer/:slug"
             component={CustomerEdit}
-          /> */}
-          {/* -------- AUTH STATE CUSTOMER ----------- */}
-
+          />
+          {/* -------- AUTH STATE  ----------- */}
           <AuthRoute
             authenticated={authenticated}
             path="/state/list"
@@ -185,7 +185,7 @@ function App() {
             path="/statecreate"
             component={StateCreate}
           />
-          {/* -------- AUTH DISTRICT CUSTOMER ----------- */}
+          {/* -------- AUTH DISTRICT  ----------- */}
           <AuthRoute
             authenticated={authenticated}
             path="/district/list"
@@ -201,11 +201,12 @@ function App() {
             path="/district/:slug"
             component={DistrictEdit}
           />
-          {/* <AuthRoute
+          {/* -------- AUTH INVOICE  ----------- */}
+          <AuthRoute
             authenticated={authenticated}
-            path="/invoice"
+            path="/invoice/list"
             component={InvoiceList}
-          /> */}
+          />
 
           <Route component={NotFound} />
         </Switch>
